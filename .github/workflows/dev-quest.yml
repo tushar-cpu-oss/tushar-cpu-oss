@@ -1,0 +1,76 @@
+name: Update Dev Quest
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-quest:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Get GitHub contributions
+        id: contributions
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+
+          USER="${{ github.repository_owner }}"
+
+          QUERY='
+          query {
+            user(login: "'"$USER"'") {
+              contributionsCollection {
+                contributionCalendar {
+                  totalContributions
+                }
+              }
+            }
+          }'
+
+          RESPONSE=$(curl -s \
+            -H "Authorization: bearer $GH_TOKEN" \
+            -X POST \
+            -d "{\"query\":\"$(echo $QUERY | tr '\n' ' ')\"}" \
+            https://api.github.com/graphql)
+
+          TOTAL=$(echo "$RESPONSE" | jq \
+          '.data.user.contributionsCollection.contributionCalendar.totalContributions')
+
+          echo "total=$TOTAL" >> $GITHUB_OUTPUT
+
+      - name: Generate Dev Quest
+        env:
+          CONTRIBUTIONS: ${{ steps.contributions.outputs.total }}
+        run: |
+
+          node scripts/generate-quest.js
+
+      - name: Commit changes
+        run: |
+
+          git config --global user.name "github-actions[bot]"
+
+          git config --global user.email \
+          "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/dev-quest.svg
+
+          git diff --cached --quiet || git commit -m "🎮 Update Dev Quest"
+
+          git push
