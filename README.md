@@ -1,16 +1,32 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**tushar-cpu-oss/tushar-cpu-oss** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# 👋 Hey, I'm Tushar
 
-Here are some ideas to get you started:
+### Developer • Problem Solver • Builder
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME&label=Profile%20Views&color=blue&style=flat" />
+
+</div>
+
+---
+
+## 🧑‍💻 About Me
+
+```text
+const tushar = {
+    code: ["C++", "Python", "JavaScript"],
+    
+    frontend: ["HTML", "CSS", "React"],
+    
+    backend: ["Flask", "FastAPI"],
+    
+    databases: ["SQL", "MongoDB"],
+    
+    tools: ["Git", "GitHub"],
+    
+    interests: [
+        "Full Stack Development",
+        "Backend Development",
+        "Data Structures & Algorithms"
+    ]
+};
