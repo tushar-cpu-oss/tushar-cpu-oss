@@ -1,49 +1,40 @@
 <div align="center">
 
-# Tushar
+# Hey, I'm Tushar 👋
 
-### Full Stack Developer • Problem Solver
+### Developer • Problem Solver • Builder
 
-<br/>
-
-[![GitHub followers](https://img.shields.io/github/followers/YOUR_USERNAME?style=flat&label=Followers)](https://github.com/tushar-cpu-oss)
-[![Profile views](https://komarev.com/ghpvc/?username=YOUR_USERNAME&style=flat&color=blueviolet)](https://github.com/tushar-cpu-oss)
+<img src="https://komarev.com/ghpvc/?username=tushar-cpu-oss&style=flat&label=Profile+Views" />
 
 </div>
 
----
+<br/>
 
-## `$ whoami`
+## 👨‍💻 About Me
 
-```js
-const developer = {
-    name: "Tushar",
+```cpp
+class Tushar {
+public:
 
-    languages: [
-        "C++",
-        "Python",
-        "JavaScript",
-        "SQL"
-    ],
+    vector<string> languages = {
+        "C++", "Python", "JavaScript", "SQL"
+    };
 
-    frontend: [
-        "HTML",
-        "CSS",
-        "React"
-    ],
+    vector<string> frontend = {
+        "HTML", "CSS", "React"
+    };
 
-    backend: [
-        "Flask",
-        "FastAPI"
-    ],
+    vector<string> backend = {
+        "Flask", "FastAPI"
+    };
 
-    database: [
+    vector<string> databases = {
         "MongoDB"
-    ],
+    };
 
-    currentlyFocusedOn: [
-        "Full Stack Development",
+    vector<string> interests = {
         "Backend Development",
+        "Full Stack Development",
         "Data Structures & Algorithms"
-    ]
+    };
 };
