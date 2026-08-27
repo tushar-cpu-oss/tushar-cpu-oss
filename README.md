@@ -1,30 +1,47 @@
 <div align="center">
 
-# 👋 Hey, I'm Tushar
+# Tushar
 
-### Developer • Problem Solver • Builder
+### Full Stack Developer • Problem Solver
 
-<img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME&label=Profile%20Views&color=blue&style=flat" />
+<br/>
+
+[![GitHub followers](https://img.shields.io/github/followers/YOUR_USERNAME?style=flat&label=Followers)](https://github.com/tushar-cpu-oss)
+[![Profile views](https://komarev.com/ghpvc/?username=YOUR_USERNAME&style=flat&color=blueviolet)](https://github.com/tushar-cpu-oss)
 
 </div>
 
 ---
 
-## 🧑‍💻 About Me
+## `$ whoami`
 
-```text
-const tushar = {
-    code: ["C++", "Python", "JavaScript"],
-    
-    frontend: ["HTML", "CSS", "React"],
-    
-    backend: ["Flask", "FastAPI"],
-    
-    databases: ["SQL", "MongoDB"],
-    
-    tools: ["Git", "GitHub"],
-    
-    interests: [
+```js
+const developer = {
+    name: "Tushar",
+
+    languages: [
+        "C++",
+        "Python",
+        "JavaScript",
+        "SQL"
+    ],
+
+    frontend: [
+        "HTML",
+        "CSS",
+        "React"
+    ],
+
+    backend: [
+        "Flask",
+        "FastAPI"
+    ],
+
+    database: [
+        "MongoDB"
+    ],
+
+    currentlyFocusedOn: [
         "Full Stack Development",
         "Backend Development",
         "Data Structures & Algorithms"
